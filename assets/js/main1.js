@@ -38,7 +38,9 @@ const acoes={
         this.audio()
         audio.play()
         clearInterval(timer)
+        audio.setAttribute('autoplay', '')
         relogio.classList.remove('pausado')
+        
         this.iniciaRelogio()
     },
     pausar(){
@@ -49,6 +51,7 @@ const acoes={
     },
     zerar(){
         clearInterval(timer)
+        audio.pause()
         segundos = 0
         relogio.innerHTML = "00:00:00"
     },
