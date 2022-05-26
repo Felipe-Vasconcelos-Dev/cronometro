@@ -38,7 +38,8 @@ const acoes={
         this.audio()
         audio.play()
         clearInterval(timer)
-        audio.setAttribute('autoplay', '')
+        audio.setAttribute('controls', '')
+        audio.setAttribute('loop', '')
         relogio.classList.remove('pausado')
         
         this.iniciaRelogio()
